@@ -8,6 +8,20 @@ public class MainArray {
     private final static ArrayStorage ARRAY_STORAGE = new ArrayStorage();
 
     public static void main(String[] args) throws IOException {
+        Resume resume = new Resume();
+        resume.uuid = "uuid1";
+        Resume resume1 = new Resume();
+        resume1.uuid = "uuid2";
+        Resume resume2 = new Resume();
+        resume2.uuid = "uuid3";
+        Resume resume3 = new Resume();
+        resume3.uuid = "uuid4";
+
+        ARRAY_STORAGE.save(resume);
+        ARRAY_STORAGE.save(resume1);
+        ARRAY_STORAGE.save(resume2);
+        ARRAY_STORAGE.save(resume3);
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Resume r;
         while (true) {
